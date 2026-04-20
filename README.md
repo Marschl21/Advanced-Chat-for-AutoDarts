@@ -31,7 +31,7 @@
 *Coming soon*
 
 ### Manuell (Developer Mode)
-1. Lade das neueste Release-ZIP von der [Releases](https://github.com/Marschl21/advanced-chat-autodarts/releases)-Seite herunter
+1. Lade das neueste Release-ZIP von der [Releases](https://github.com/Marschl21/Advanced-Chat-for-AutoDarts/releases)-Seite herunter
 2. ZIP entpacken
 3. Chrome öffnen → `chrome://extensions/`
 4. **Entwicklermodus** oben rechts aktivieren
