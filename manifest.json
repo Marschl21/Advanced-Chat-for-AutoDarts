@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Advanced Chat for AutoDarts",
+  "short_name": "AutoDarts Chat",
+  "version": "1.0.0",
+  "description": "Speichert den Chatverlauf auf AutoDarts und zeigt ihn direkt im Spiel an.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://play.autodarts.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://play.autodarts.io/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Advanced Chat for AutoDarts"
+  }
+}
