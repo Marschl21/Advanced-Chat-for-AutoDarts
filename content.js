@@ -190,6 +190,10 @@
     });
 
     anchor.parentNode.insertBefore(block, anchor);
+
+    // Expand the native AutoDarts chat panel to 75vh so cards are visible without scrolling
+    expandPanel(anchor);
+
     refresh();
   }
 
@@ -245,6 +249,32 @@
     let h = 0;
     for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) & 0xffff;
     return h % 360;
+  }
+
+
+  /* ── Expand the native chat panel to 75vh ── */
+  function expandPanel(anchor) {
+    let el = anchor.parentElement;
+    for (let i = 0; i < 10; i++) {
+      if (!el || el === document.body) break;
+      const s = window.getComputedStyle(el);
+      const r = el.getBoundingClientRect();
+      if ((s.position === 'fixed' || s.position === 'sticky') &&
+           r.bottom >= window.innerHeight - 20 &&
+           r.width > window.innerWidth * 0.5) {
+        el.style.setProperty('max-height', '75vh', 'important');
+        el.style.setProperty('height', '75vh', 'important');
+        el.style.setProperty('overflow-y', 'auto', 'important');
+        const child = el.firstElementChild;
+        if (child) {
+          child.style.setProperty('max-height', '100%', 'important');
+          child.style.setProperty('height', '100%', 'important');
+          child.style.setProperty('overflow-y', 'auto', 'important');
+        }
+        break;
+      }
+      el = el.parentElement;
+    }
   }
 
   /* ── Poll for panel ── */
