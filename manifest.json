@@ -6,11 +6,11 @@
   "description": "Speichert den Chatverlauf auf AutoDarts und zeigt ihn direkt im Spiel an.",
   "permissions": ["storage"],
   "host_permissions": [
-    "https://play.autodarts.io/*"
+    "https://play.autodarts.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://play.autodarts.io/*"],
+      "matches": ["https://play.autodarts.com/*"],
       "js": ["content.js"],
       "css": ["styles.css"],
       "run_at": "document_start",

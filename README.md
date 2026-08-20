@@ -36,7 +36,7 @@
 3. Chrome öffnen → `chrome://extensions/`
 4. **Entwicklermodus** oben rechts aktivieren
 5. **„Entpackte Erweiterung laden"** klicken → entpackten Ordner auswählen
-6. [play.autodarts.io](https://play.autodarts.io) öffnen und den Chat-Button klicken
+6. [play.autodarts.com](https://play.autodarts.com) öffnen und den Chat-Button klicken
 
 ## Wie es funktioniert
 
